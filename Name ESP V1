@@ -1,0 +1,30 @@
+local function createBillboard(player)
+   local billboardGui = Instance.new("BillboardGui")
+   billboardGui.Size = UDim2.new(0, 100, 0, 50)
+   billboardGui.Adornee = player.Character.Head
+   billboardGui.StudsOffset = Vector3.new(0, 3, 0) -- Adjusted to be slightly higher
+   billboardGui.Name = "PlayerNameBillboard"
+   
+   local nameLabel = Instance.new("TextLabel", billboardGui)
+   nameLabel.Text = player.Name
+   nameLabel.Size = UDim2.new(1, 0, 1, 0)
+   nameLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- Green color
+   nameLabel.BackgroundTransparency = 1
+   nameLabel.Font = Enum.Font.SourceSans
+   nameLabel.TextSize = 20
+   
+   billboardGui.Parent = game.Workspace
+end
+
+-- Function to add billboard GUI for all existing players and listen for new ones
+local function setupBillboards()
+   for _, player in ipairs(game.Players:GetPlayers()) do
+       createBillboard(player)
+   end
+   game.Players.PlayerAdded:Connect(function(player)
+       createBillboard(player)
+   end)
+end
+
+-- Call the setup function when the script starts
+setupBillboards()
