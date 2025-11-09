@@ -1,5 +1,311 @@
 # MoonHook #1
 
+# MoonHook.lua - Complete Features List
+
+## Main Tabs
+1. **Legit** - Legitimate/undetectable aim features
+2. **Rage** - Aggressive/obvious aim features
+3. **Visuals** - Visual enhancements and ESP
+4. **Misc** - Miscellaneous features
+5. **Settings** - Configuration and preferences
+
+---
+
+## LEGIT TAB
+
+### Aimbot Group
+- **Enabled** (Toggle + Keybind)
+- **Aimbot strength** (Slider: 0-10, Default: 5)
+
+### Bullet Redirection Group
+- **Enabled** (Toggle)
+- **Bullet redirection headshot chance** (Slider: 0-100%, Default: 0%)
+- **Bullet redirection hitchance** (Slider: 0-100%, Default: 75.5%)
+
+### Configuration Group
+- **Use FOV** (Toggle)
+- **Visualize FOV** (Toggle + Color Picker)
+- **Dynamic FOV** (Toggle)
+- **Field of view range** (Slider: 0-1000, Default: 50)
+- **Field of view visual sides** (Slider: 3-64, Default: 8)
+- **Field of view lookvector** (Slider: 1-20, Default: 5)
+- **Field of view position** (Dropdown: Mouse / Barrel look vector)
+- **Field of view dynamic mode** (Dropdown: In / Out)
+- **Target part** (Dropdown: Head / Torso / Closest Visible / Random)
+- **Random hitpart chance** (Slider: 0-100%, Default: 25%)
+
+### Legit Check Group
+- **Enabled** (Toggle)
+- **Distance threshold** (Slider: 0-1000 studs, Default: 200)
+- **Crosshair threshold** (Slider: 0-500 pixels, Default: 100)
+
+---
+
+## RAGE TAB
+
+### Ragebot Group
+- **Enabled** (Toggle + Keybind)
+- **Rotate cardinals** (Toggle)
+- **Firerate ping prediction** (Toggle)
+- **Use old frames** (Toggle)
+- **Firerate boost** (Toggle)
+- **Visualize shot** (Toggle)
+- **Use server position** (Toggle)
+- **Teleport scanning** (Toggle)
+- **Indicator** (Toggle + Color Picker)
+- **Bullet check step** (Slider: 10-240, Default: 30)
+- **Origin scanning radius** (Slider: 0-15.9, Default: 6.5)
+- **Hitbox scanning radius** (Slider: 0-9.9, Default: 6.5)
+- **Random scanning count** (Slider: 1-16, Default: 8)
+- **Firerate boost factor** (Slider: 1-1, Default: 1) - *Disabled*
+- **Position frame** (Slider: 1-5, Default: 1)
+- **Ragebot scanning mode** (Multi-select: Cardinal / Random / Rotated Cardinals)
+- **Ragebot teleport scanning mode** (Dropdown: Cardinal / Pathfind)
+
+### Tick Shift Group
+- **Enabled** (Toggle)
+- **Tick shift amount** (Slider: 60-100, Default: 100)
+- **Tick shift update rate** (Slider: 1-3, Default: 2)
+
+### Angle Changer Group
+- **Enabled** (Toggle + Keybind)
+
+#### Yaw Settings
+- **Yaw enabled** (Toggle)
+- **Use jitter** (Toggle)
+- **Yaw angle** (Slider: -180 to 180, Default: 0)
+- **Jitter offset** (Slider: -180 to 180, Default: 0)
+- **Yaw random rate** (Slider: 1-10, Default: 1)
+- **Yaw sine wave rate** (Slider: 1-10, Default: 1)
+- **Yaw sine wave degree** (Slider: 0-360, Default: 0)
+- **Yaw mode** (Dropdown: Custom / Sine wave / Random)
+
+#### Pitch Settings
+- **Pitch enabled** (Toggle)
+- **Pitch angle** (Slider: -90 to 90, Default: 0)
+- **Pitch sine wave speed** (Slider: 0-10, Default: 0)
+- **Pitch random rate** (Slider: 1-10, Default: 1)
+- **Pitch mode** (Dropdown: Custom / Sine wave / Random)
+
+#### Spin-bot Settings
+- **Spin-bot enabled** (Toggle)
+- **Sine wave** (Toggle)
+- **Spin-bot degree rate** (Slider: -1800 to 1800, Default: 0)
+- **Spin-bot sine wave speed** (Slider: 0-10, Default: 0)
+
+### Fake Lag Group
+- **Enabled** (Toggle + Keybind)
+- **Randomize position** (Toggle)
+- **Break position** (Toggle)
+- **Fake lag choke time** (Slider: 0.1-10, Default: 0.5)
+- **Fake lag randomization factor** (Slider: 0.1-20, Default: 4)
+
+### Spawn Protection Group
+- **Enabled** (Toggle)
+- **Spawn protection duration** (Slider: 1-10, Default: 1)
+
+### Knife Bot Group
+- **Enabled** (Toggle + Keybind)
+- **Fake input** (Toggle)
+- **Only on knife** (Toggle)
+- **Knife bot radius** (Slider: 0-25, Default: 5)
+
+---
+
+## VISUALS TAB
+
+### Players Group (ESP)
+- **Enabled** (Toggle)
+- **Bounding box** (Toggle + Color Picker)
+- **Filled bounding box** (Toggle + Color Picker + Transparency)
+- **Health bar** (Toggle + Gradient Toggle + Max/Low Color Pickers + Width Slider)
+- **Tracer** (Toggle + Color Picker)
+- **Chams** (Toggle + Fill/Outline Color Pickers + Transparency)
+- **Server position** (Toggle + Color Picker)
+- **Skeleton** (Toggle + Color Picker + Transparency)
+- **Show visible** (Toggle) - *Changes colors to green when visible*
+- **Target indicator** (Toggle + Color Picker) - *Shows line to target + yellow box/chams*
+- **Nametag** (Toggle + Color Picker)
+- **Weapon** (Toggle + Color Picker)
+- **Health text** (Toggle + Colorize Toggle + Color Picker + Forced Size/Font)
+- **Information** (Toggle + Color Picker + Multi-select: Distance / Rank / Shift)
+- **Font size** (Slider: 0-20, Default: 12)
+- **Font options** (Dropdown: Various fonts)
+- **Font casing** (Dropdown: Normal / UPPER / lower)
+
+### Bullet Tracers Group
+- **Local bullet tracers** (Toggle + Start/End Color Pickers)
+- **Enemy bullet tracers** (Toggle + Start/End Color Pickers)
+- **Use third person muzzle** (Toggle)
+- **Use new origin** (Toggle)
+- **Bullet tracer lifetime** (Slider: 0.1-10, Default: 1)
+- **Bullet tracer texture** (Dropdown: Various textures)
+
+### Time Group
+- **Time stop** (Toggle + Keybind)
+- **Time manipulation** (Toggle)
+- **Time manipulation time** (Slider: 0-12, Default: 6)
+
+### Lighting Group
+- **Custom ambience** (Toggle + Color Picker)
+- **Custom skybox** (Toggle)
+- **Custom skybox option** (Dropdown: Various skyboxes)
+- **Custom fog** (Toggle + Color Picker)
+- **Custom fog end** (Slider: 0-100000, Default: 100000)
+- **Custom fog start** (Slider: 0-100000, Default: 100000)
+
+### Viewmodel Offset Group
+- **Offset changer** (Toggle)
+- **Remove on aim** (Toggle)
+- **Offset X-axis** (Slider: -5 to 5, Default: 0)
+- **Offset Y-axis** (Slider: -5 to 5, Default: 0)
+- **Offset Z-axis** (Slider: -5 to 5, Default: 0)
+
+### Crosshair Group
+- **Enabled** (Toggle + Start/End Color Pickers)
+- **Crosshair spin** (Toggle)
+- **Follow barrel** (Toggle)
+- **Crosshair length** (Slider: 2-25, Default: 10)
+- **Crosshair spacing** (Slider: 0-25, Default: 10)
+- **Crosshair width** (Slider: 1-5, Default: 2)
+- **Crosshair spin rate** (Slider: 0-360, Default: 180)
+- **Crosshair barrel distance** (Slider: 1-20, Default: 5)
+- **Visible reticles** (Multi-select: Top / Right / Bottom / Left)
+
+### Chams Tabbox
+
+#### Viewmodel Chams Tab
+- **Weapon chams** (Toggle + Color Picker + Reflectance + Transparency + Material)
+- **Arm chams** (Toggle + Color Picker + Reflectance + Transparency + Material)
+- **No accessories** (Toggle)
+- **No arms** (Toggle)
+- **Force field animation** (Dropdown: Various animations)
+
+#### Third Person Chams Tab
+- **Enabled** (Toggle)
+- **Apply chams to gun** (Toggle)
+- **Third person chams color** (Color Picker)
+- **Third person reflectance** (Slider: -5 to 5, Default: 0)
+- **Third person cham material** (Dropdown: Various materials)
+
+### Third Person Group
+- **Enabled** (Toggle + Keybind)
+- **Remove arms** (Toggle)
+- **Remove weapon** (Toggle)
+- **Third person model** (Toggle)
+- **Use root position** (Toggle)
+- **Third person distance** (Slider: 0-30, Default: 7.5)
+- **Third person replication delay** (Slider: 0-1, Default: 0)
+- **Third person model scale** (Slider: 0.01-10, Default: 1)
+- **Third person movement mode** (Dropdown: Extrapolate / Instant position / Interpolation / Instant replication)
+- **Third person model mesh** (Dropdown: Various models / Allow null)
+
+---
+
+## MISC TAB
+
+### Modifications Tabbox
+
+#### Weapon Tab
+- **No walking sway** (Toggle)
+- **No gun recoil** (Toggle)
+- **No weapon spread** (Toggle)
+- **Always auto** (Toggle)
+- **Instant reload** (Toggle)
+- **Instant equip** (Toggle)
+- **Instant aim** (Toggle)
+- **Choke hit packets** (Toggle)
+- **Shoot sound** (Toggle + Volume + Pitch Sliders + Sound Dropdown)
+
+#### Camera Tab
+- **No camera bob** (Toggle)
+- **No camera recoil** (Toggle)
+- **No camera suppression** (Toggle)
+
+### Movement Group
+- **Speed hack** (Toggle + Keybind + Factor Slider + Method Dropdown: Velocity / WalkSpeed)
+- **Fly hack** (Toggle + Keybind + Factor Slider + Vertical Speed Slider + Mode Dropdown: Regular / Camera)
+- **Bunny hop** (Toggle + Keybind + Jump Height Slider)
+- **No fall damage** (Toggle)
+- **Air check bypass** (Toggle)
+- **No position corrections** (Toggle)
+
+### Server Group
+- **Hop on kick** (Toggle)
+- **Hop on votekick** (Toggle)
+- **Minimum players** (Slider: 2-32, Default: 16)
+- **Server hop** (Button)
+- **Rejoin** (Button)
+
+### Replication Group
+- **Instant replication** (Toggle)
+- **Extrapolate resolver** (Toggle)
+
+### Hit Effects Group
+- **Hit sound** (Toggle + Volume Slider + Sound Dropdown)
+- **No pf headshot sound** (Toggle)
+- **Hit notification** (Toggle)
+
+### Kill Effects Group
+- **Kill sound** (Toggle + Volume Slider + Sound Dropdown)
+- **No pf killsound** (Toggle)
+- **Kill say** (Toggle + Text Input with {player} placeholder)
+- **Kill notification** (Toggle)
+
+### Chat Group
+- **Chat spam enabled** (Toggle + Keybind)
+- **Maximum emojis** (Slider: 0-10, Default: 0)
+- **Chat spam delay** (Slider: 4-10, Default: 5)
+- **Chat spam choices** (Dropdown: Twinkhook / Custom)
+
+---
+
+## SETTINGS TAB
+
+### Menu Group
+- **Menu keybind** (Keybind - Default: End)
+- **Watermark** (Toggle)
+- **Watermark refresh rate** (Slider: 0-240hz, Default: 60hz)
+- **Watermark format** (Input - Default: 'twinkhook.lua | dev | rtt: {ping}ms | {fps} fps | {time}')
+- **Keybinds** (Toggle - Shows/hides keybind frame)
+
+### Configuration Management
+- **Theme Manager** - Apply and save themes
+- **Save Manager** - Save/load configurations
+- **Auto-load config** - Automatically loads saved config
+- **Config section** - Builds config save/load UI
+
+---
+
+## Additional Features (Not in UI but implemented)
+
+### Notifications
+- Load notification with load time
+- "Thank you for using! made with love By Uni :)" notification on execute
+- Legit check warning: "⚠️ Be careful, you might be blatant!!"
+- Kill notifications
+- Hit notifications
+
+### Logging System
+- Kill logs
+- Logs folder creation
+
+### File System
+- Chat spam text file support
+- Config save/load system
+- Theme save/load system
+
+---
+
+## Summary Statistics
+
+- **Total Main Tabs**: 5
+- **Total Feature Groups**: ~25+
+- **Total Toggles**: ~80+
+- **Total Sliders**: ~50+
+- **Total Dropdowns**: ~25+
+- **Total Color Pickers**: ~20+
+- **Total Keybinds**: ~15+
 
 
 ![356fb6e766df967aec8696606cdaae53](https://github.com/UniTheVerse/MoonLight-Hub/assets/141660013/0be52463-5b69-40db-bb60-565657f8b8f3)
