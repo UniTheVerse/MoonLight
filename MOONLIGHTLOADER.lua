@@ -6,6 +6,7 @@ local function GetService(Service)
 	return cloneref(game:GetService(Service));
 end
 
+local HttpService = GetService("HttpService");
 local Players = GetService("Players");
 local RunService = GetService("RunService");
 local TweenService = GetService("TweenService");
@@ -28,6 +29,60 @@ local LocalPlayer = Players.LocalPlayer;
 local PlayerGui = (RunService:IsStudio() and LocalPlayer.PlayerGui) or GetService("CoreGui");
 
 local GothamFont = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+
+-- GitHub API
+local Github = {}; do
+	Github.USER_AGENT = "MoonLightLoader";
+	Github.ERROR = "Unable to fetch";
+
+	Github.OWNER = "UniTheVerse";
+	Github.REPO = "MoonLight";
+	Github.URL = "https://api.github.com";
+
+	function Github:GetUpdate(Path)
+		local Error = self.ERROR;
+		local Success, Response = pcall(function()
+			return game:HttpGet(string.format("%s/repos/%s/%s/commits?path=%s&per_page=1", self.URL, self.OWNER, self.REPO, HttpService:UrlEncode(Path)), false, {
+				["User-Agent"] = self.USER_AGENT,
+				["Accept"] = "application/vnd.github.v3+json"
+			});
+		end)
+
+		if (not Success) then
+			return Error;
+		end
+
+		local RetrievedCommits, Commits = pcall(function()
+			return HttpService:JSONDecode(Response);
+		end)
+
+		if (not RetrievedCommits) then
+			return Error;
+		end
+
+		if (typeof(Commits) ~= "table" or #Commits == 0) then
+			return Error;
+		end
+
+		local LatestUpdate = Commits[1];
+
+		if (not LatestUpdate or not LatestUpdate.commit) then
+			return Error;
+		end
+
+		LatestUpdate = LatestUpdate.commit;
+
+		-- Parse the date
+		local DateString = LatestUpdate.author.date;
+		local Year, Month, Day = DateString:match("(%d+)-(%d+)-(%d+)");
+		
+		if Year and Month and Day then
+			return string.format("%s/%s/%s", Month, Day, Year);
+		end
+
+		return DateString;
+	end
+end
 
 -- Loading Screen
 local function CreateLoadingScreen()
